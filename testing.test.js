@@ -1,6 +1,6 @@
 // 1. A capitalize function that takes a string and returns it with the first character capitalized.
 
-const { capitalize, reverseString } = require("./testing.js");
+const { capitalize, reverseString, calculator } = require("./testing.js");
 
 test("files are testing well", () => {
   expect(capitalize("string")).toBe("String");
@@ -13,6 +13,22 @@ test("Take string and return it reversed", () => {
 });
 
 // 3. A calculator object that contains functions for the basic operations: add, subtract, divide, and multiply. Each of these functions should take two numbers and return the correct calculation.
+
+test("Addition works", () => {
+  expect(calculator.add(1, 2)).toBe(3);
+});
+
+test("Subtraction works", () => {
+  expect(calculator.subtract(5, 3)).toBe(2);
+});
+
+test("Divide works", () => {
+  expect(calculator.divide(16, 2)).toBe(8);
+});
+
+test("Multiply works", () => {
+  expect(calculator.multiply(2, 8)).toBe(16);
+});
 
 // 4. A caesarCipher function that takes a string and a shift factor and returns it with each character “shifted”. Read more about how a Caesar cipher works.
 // Don’t forget to test wrapping from z to a. For example, caesarCipher('xyz', 3) should return 'abc'.

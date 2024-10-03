@@ -13,4 +13,21 @@ function reverseString(prop) {
   return newArr.join("");
 }
 
-module.exports = { capitalize, reverseString };
+const calculator = {
+  add(a, b) {
+    return a + b;
+  },
+
+  subtract(a, b) {
+    return a - b;
+  },
+
+  divide(a, b) {
+    return a / b;
+  },
+  multiply(a, b) {
+    return a * b;
+  },
+};
+
+module.exports = { capitalize, reverseString, calculator };

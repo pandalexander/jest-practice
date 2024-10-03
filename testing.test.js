@@ -1,12 +1,16 @@
 // 1. A capitalize function that takes a string and returns it with the first character capitalized.
 
-const capitalize = require("./testing.js");
+const { capitalize, reverseString } = require("./testing.js");
 
 test("files are testing well", () => {
   expect(capitalize("string")).toBe("String");
 });
 
 // 2. A reverseString function that takes a string and returns it reversed.
+
+test("Take string and return it reversed", () => {
+  expect(reverseString("abcdefg")).toBe("gfedcba");
+});
 
 // 3. A calculator object that contains functions for the basic operations: add, subtract, divide, and multiply. Each of these functions should take two numbers and return the correct calculation.
 

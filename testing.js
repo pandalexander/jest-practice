@@ -95,14 +95,13 @@ function getAverage(arr) {
   return sum / arr.length;
 }
 
-// function getMin()
-// function getMax()
-// function getLength()
-
 function analyzeArray(arr) {
   let obj = {};
 
   obj["average"] = getAverage(arr);
+  obj["min"] = Math.min(...arr);
+  obj["max"] = Math.max(...arr);
+  obj["length"] = arr.length;
 
   return obj;
 }

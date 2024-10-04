@@ -25,9 +25,66 @@ const calculator = {
   divide(a, b) {
     return a / b;
   },
+
   multiply(a, b) {
     return a * b;
   },
 };
 
-module.exports = { capitalize, reverseString, calculator };
+function changeLetter(char) {
+  if (/[a-zA-Z]/.test(char)) {
+    let isUpperCase = false;
+
+    if (char === char.toUpperCase()) {
+      isUpperCase = true;
+      char = char.toLowerCase();
+    }
+
+    const alphabet = [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i",
+      "j",
+      "k",
+      "l",
+      "m",
+      "n",
+      "o",
+      "p",
+      "q",
+      "r",
+      "s",
+      "t",
+      "u",
+      "v",
+      "w",
+      "x",
+      "y",
+      "z",
+    ];
+
+    let changedChar = alphabet[alphabet.indexOf(char) + 3];
+
+    return isUpperCase ? changedChar.toUpperCase() : changedChar;
+  } else {
+    return char;
+  }
+}
+
+function caesarCipher(str) {
+  let splitString = str.split("");
+  let arrayToJoin = [];
+  for (let i = 0; i < splitString.length; i++) {
+    arrayToJoin.push(changeLetter(splitString[i]));
+  }
+  let newString = arrayToJoin.join("");
+  return newString;
+}
+
+module.exports = { capitalize, reverseString, calculator, caesarCipher };

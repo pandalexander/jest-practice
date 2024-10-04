@@ -87,4 +87,30 @@ function caesarCipher(str) {
   return newString;
 }
 
-module.exports = { capitalize, reverseString, calculator, caesarCipher };
+function getAverage(arr) {
+  const sum = arr.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  return sum / arr.length;
+}
+
+// function getMin()
+// function getMax()
+// function getLength()
+
+function analyzeArray(arr) {
+  let obj = {};
+
+  obj["average"] = getAverage(arr);
+
+  return obj;
+}
+
+module.exports = {
+  capitalize,
+  reverseString,
+  calculator,
+  caesarCipher,
+  analyzeArray,
+};

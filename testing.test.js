@@ -5,6 +5,7 @@ const {
   reverseString,
   calculator,
   caesarCipher,
+  analyzeArray,
 } = require("./testing.js");
 
 test("files are testing well", () => {
@@ -63,16 +64,6 @@ test("Check for phrase", () => {
   );
 });
 
-// test("Successfully implement caesar cipher with all edge cases", () => {
-//   expect(
-//     caesarCipher(
-//       "Hello, World! 123 - This is a test: @CaesarCipher? Let's see how far we can go."
-//     )
-//   ).toBe(
-//     "Khoor, Zruog! 123 - Wklv lv d whvw: @FdhvduFlskhu? Ohw'v vhh krz idu zh fdq jr."
-//   );
-// });
-
 // 5. An analyzeArray function that takes an array of numbers and returns an object with the following properties: average, min, max, and length.
 
 // const object = analyzeArray([1,8,3,4,2,6]);
@@ -83,3 +74,9 @@ test("Check for phrase", () => {
 //    max: 8,
 //    length: 6
 // };
+
+test("Returns object with average", () => {
+  expect(analyzeArray([1, 2, 3])).toStrictEqual({
+    average: 2,
+  });
+});
